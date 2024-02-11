@@ -50,7 +50,7 @@ export async function voteOnPoll(app: FastifyInstance) {
             } else if (votedOption) {
                 return reply
                 .status(400)
-                .send('You already voted on this poll.')
+                .send({message:'You already voted on this poll.'})
             }
         }
 
